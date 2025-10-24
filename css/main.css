@@ -1,0 +1,337 @@
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #c5e848;
+  overflow: hidden;
+  max-width: 1600px; /* Set the maximum width for the navigation bar */
+  margin: auto; /* Center the navigation bar */
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #2e83d2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 26px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: hsl(139, 76%, 48%);
+  color: hsl(0, 18%, 91%);
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: #9fd6c7;
+  color: #855e8c;
+}
+
+/* Hide the icon that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+/* Style for page content */
+.content {
+  padding: 14px;
+  font-size: 22px;
+}
+
+/* When the screen is less than 800 pixels wide */
+@media screen and (max-width: 800px) {
+  /* Hide all links, except for the selected tab */
+  .topnav a:not(.active) {
+    display: none;
+  }
+
+  /* Show the icon that should open and close the topnav */
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* When the screen is less than 800 pixels wide, if the user clicks on the icon */
+/* the "responsive" class attribute will be added to the topnav by the JavaScript code */
+/* This media query sets the style for the unfolded topnav */
+/* It makes the topnav look good on small screens (display the links vertically instead of horizontally)  */
+@media screen and (max-width: 800px) {
+  .topnav.responsive {
+    position: relative;
+  }
+
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+
+
+
+/* Style for the video container */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 70vh; /* Video occupies 70% of the viewport height */
+    overflow: hidden;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Style for the abstract section */
+.content h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin: 20px 0;
+}
+
+/* Style for additional content below the video */
+.additional-content {
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 800px) {
+    .video-container {
+        height: 50vh; /* Reduce video height for smaller screens */
+    }
+
+    .content h1 {
+        font-size: 2em;
+    }
+
+    .additional-content {
+        font-size: 1em;
+    }
+}
+
+
+
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Ensure slideshow images are smaller and responsive */
+.slideshow-container img {
+    max-width: 80%; /* Limit the width to 80% of the container */
+    max-height: 400px; /* Limit the height to 400px */
+    margin: auto; /* Center the image */
+    display: block; /* Ensure the image is treated as a block element */
+    object-fit: contain; /* Ensure the image maintains its aspect ratio */
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  z-index: 100; /* Ensure buttons are above images */
+  background-color: rgba(0,0,0,0.5); 
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Position the "prev button" to the left */
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/2 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+
+
+/*section 1 title and content*/
+/* Style for section title */
+.section-title {
+    text-align: left; /* Align text to the left */
+    font-size: 2.5rem; /* Adjust font size */
+    font-weight: bold; /* Make text bold */
+    margin: 20px 0; /* Add margin around the title */
+    border-bottom: 2px solid #ddd; /* Add a bottom border */
+    padding-bottom: 10px; /* Add padding below the text */
+}
+
+/* Style for fungi information */
+.fungi-info h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.fungi-info p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+
+
+
+
+/* Style for section 2 title */
+.section2-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 20px 0;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* Zebra-striped table */
+.zebra-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+.zebra-table th, .zebra-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+.zebra-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.zebra-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Style for section 2 content */
+.section2-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+
+
+
+/* Style for reference title */
+.reference-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 20px 0;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* Style for reference list */
+.reference-list {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin: 20px;
+    padding-left: 40px;
+}
+
+.reference-list li {
+    margin-bottom: 15px;
+}
+
+.reference-list a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.reference-list a:hover {
+    text-decoration: underline;
+}
